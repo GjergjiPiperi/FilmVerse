@@ -1,16 +1,19 @@
 function Navbar({ searchValue, setSearchValue, children }) {
   return (
-    <nav className="sticky flex flex-col top-0 bg-gradient-to-r from-blue-400 to-blue-900 p-2">
-      <div className="flex w-full items-center">
-        <div className="flex items-center p-2 gap-2">
+    <nav className="sticky top-0 flex flex-col p-2 bg-gradient-to-r from-blue-400 to-blue-900">
+      <div className="flex items-center w-full">
+        {/* Logo and App Name */}
+        <div className="flex items-center gap-2 p-2">
           <img
             src="/images/clapperboard.png"
             alt=""
             className="object-cover w-10 h-10"
           />
-          <p className="text-2xl pl-2">FilmVerse</p>
+          <p className="pl-2 text-2xl">FilmVerse</p>
         </div>
-        <div className="flex relative items-center justify-center ml-auto pr-2">
+
+        {/* Search Bar */}
+        <div className="relative flex items-center justify-center pr-2 ml-auto">
           <input
             className="border rounded-sm placeholder-zinc-400 focus:outline outline-gray-400"
             type="search"
@@ -19,6 +22,8 @@ function Navbar({ searchValue, setSearchValue, children }) {
             onChange={(e) => setSearchValue(e.target.value)}
           />
         </div>
+
+        {/* Sidebar (Favorites List) */}
         <div className="ml-4">{children}</div>
       </div>
     </nav>
