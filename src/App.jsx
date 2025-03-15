@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Navbar from "./Navbar";
-import MovieCard from "./MovieCard";
-import Sidebar from "./Sidebar";
+import Navbar from "./components/Navbar";
+import MovieCard from "./components/MovieCard";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   // State to store the list of movies fetched from the API
