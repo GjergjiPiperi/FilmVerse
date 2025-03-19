@@ -30,8 +30,9 @@ function App() {
   // useEffect hook to fetch movies based on the search value
   useEffect(() => {
     async function fetchMovies(searchValue) {
+      const apiKey = import.meta.env.VITE_OMDB_API_KEY;
       const response = await fetch(
-        `http://www.omdbapi.com/?s=${searchValue}&apikey=8f9def89`
+        `http://www.omdbapi.com/?s=${searchValue}&apikey=${apiKey}`
       );
       const result = await response.json();
       console.log(result);
